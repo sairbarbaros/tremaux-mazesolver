@@ -54,12 +54,13 @@ elif node == 1:
         left(i)
         moves.append(left(i))
 
-    leng = len(moves)
-    important_move = moves[int((leng / 4) + 1)]
-    other_move = moves[int(((leng / 4) + 1) + 1)]
+    
 
 
     if (i == 0) and ("fwd" in moves and "right in moves" and "left" in moves and "back" in moves):
+        leng = len(moves)
+        important_move = moves[int((leng / 4) + 1)]
+        other_move = moves[int(((leng / 4) + 1) + 1)]
         
         if (important_move, other_move) == ("right", "left") or ("left", "right") or ("fwd", "back") or ("back", "fwd"):
             print("don't remove the node")
