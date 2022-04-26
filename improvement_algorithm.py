@@ -55,8 +55,8 @@ elif node == 1:
         moves.append(left(i))
 
     leng = len(moves)
-    important_move = moves[(leng / 4) + 1]
-    other_move = moves[((leng / 4) + 1) + 1]
+    important_move = moves[int((leng / 4) + 1)]
+    other_move = moves[int(((leng / 4) + 1) + 1)]
 
 
     if (i == 0) and ("fwd" in moves and "right in moves" and "left" in moves and "back" in moves):
