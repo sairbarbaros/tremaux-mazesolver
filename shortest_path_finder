@@ -1,0 +1,31 @@
+rotations = {"f": "b", "b": "f", "l": "r", "r": "l"}
+lab = []
+array = ["f", "f", "f", "l", "l", "l", "b", "b", "b", "r", "r", "r"]
+x = 0
+
+while x <= (len(array)-2):
+    if array[x] == rotations[array[x+1]]:
+        del array[x]
+        del array[x]
+        x = 0
+        print(array)
+    else:
+        x += 1
+
+x = 0
+
+while x < len(array) - 3:
+    for i in range(0, 4):
+        lab.append(array[x])
+
+    if "f" and "b" and "l" and "r" in lab:
+        for i in range(0, 4):
+            del array[x]
+        x = 0
+        continue
+
+    else:
+        x += 1
+
+
+print(array)
